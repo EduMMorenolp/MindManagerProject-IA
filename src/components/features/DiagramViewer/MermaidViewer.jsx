@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import mermaid from 'mermaid';
 
 const MermaidViewer = ({ 
   diagram, 
@@ -12,8 +11,28 @@ const MermaidViewer = ({
   const [isLoading, setIsLoading] = useState(true);
   const [, setError] = useState(null);
   const [diagramId] = useState(`mermaid-${Math.random().toString(36).substr(2, 9)}`);
+  const [mermaid, setMermaid] = useState(null);
 
   useEffect(() => {
+    // Cargar Mermaid dinámicamente
+    const loadMermaid = async () => {
+      try {
+        const mermaidModule = await import('mermaid');
+        const mermaidInstance = mermaidModule.default;
+        setMermaid(mermaidInstance);
+      } catch (error) {
+        console.error('Error cargando Mermaid:', error);
+        setError(error);
+        if (onError) onError(error);
+      }
+    };
+
+    loadMermaid();
+  }, [onError]);
+
+  useEffect(() => {
+    if (!mermaid || !diagram) return;
+    
     // Configurar Mermaid
     mermaid.initialize({
       startOnLoad: false,
@@ -37,10 +56,10 @@ const MermaidViewer = ({
       },
       securityLevel: 'loose'
     });
-  }, []);
+  }, [mermaid]);
 
   useEffect(() => {
-    if (!diagram || !mermaidRef.current) return;
+    if (!diagram || !mermaidRef.current || !mermaid) return;
 
     const renderDiagram = async () => {
       setIsLoading(true);
@@ -103,7 +122,7 @@ const MermaidViewer = ({
     };
 
     renderDiagram();
-  }, [diagram, diagramId, onError]);
+  }, [diagram, diagramId, onError, mermaid]);
 
   return (
     <div className={`mermaid-viewer ${className}`}>

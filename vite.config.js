@@ -8,11 +8,20 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: 'dist',
     sourcemap: false,
+    chunkSizeWarningLimit: 1000, // Aumentar el límite a 1MB
     rollupOptions: {
       output: {
         manualChunks: {
+          // React core
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
+          
+          // Librerías de gráficos pesadas (solo si existen)
+          charts: ['mermaid'],
+          
+          // Utilerías que realmente tenemos
+          utils: ['axios', 'marked'],
+          pdf: ['jspdf', 'html2canvas'],
         },
       },
     },
