@@ -2,7 +2,7 @@
 
 ## 🚀 Inicio Rápido
 
-Esta guía te ayudará a configurar el entorno de desarrollo de ProjectManagerMind IA Frontend desde cero.
+Esta guía te ayudará a configurar el entorno de desarrollo de MindManagerProject IA Frontend desde cero.
 
 ## 📋 Prerrequisitos
 
@@ -43,11 +43,11 @@ code --version  # 1.80.0 o superior
 
 ```bash
 # Clonar desde GitHub
-git clone https://github.com/EduMMorenolp/ProjectManagerMind-IA-Frontend.git
-cd ProjectManagerMind-IA-Frontend
+git clone https://github.com/EduMMorenolp/MindManagerProject-IA-Frontend.git
+cd MindManagerProject-IA-Frontend
 
 # O si ya tienes el proyecto localmente
-cd d:\Proyectos\ProjectManagerMind-IA\frontend
+cd d:\Proyectos\MindManagerProject-IA\frontend
 ```
 
 ### 2. Instalar Dependencias
@@ -67,7 +67,7 @@ Crear archivo `.env` en la raíz del proyecto frontend:
 ```bash
 # .env
 VITE_API_URL=http://localhost:3000
-VITE_APP_NAME=ProjectManagerMind IA
+VITE_APP_NAME=MindManagerProject IA
 VITE_APP_VERSION=1.0.0
 VITE_DEBUG=true
 

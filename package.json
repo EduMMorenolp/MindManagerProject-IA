@@ -1,9 +1,9 @@
 {
-  "name": "projectmanagermind-ia-frontend",
+  "name": "mindmanagerproject-ia-frontend",
   "private": true,
   "version": "1.0.0",
-  "description": "Frontend de ProjectManagerMind IA - Sistema inteligente de gestión de proyectos de software",
-  "homepage": "https://edummorenolp.github.io/ProjectManagerMind-IA",
+  "description": "Frontend de MindManagerProject IA - Sistema inteligente de gestión de proyectos de software",
+  "homepage": "https://edummorenolp.github.io/MindManagerProject-IA",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -4,7 +4,13 @@ Interfaz de usuario moderna y responsiva para el sistema inteligente de gestión
 
 ## 🎯 ¿Qué es ProjectManagerMind IA?
 
-**ProjectManagerMind IA** es un sistema integral que unifica la gestión de documentación, generación de entregables y apoyo a las decisiones mediante el uso de Inteligencia Artificial. Funciona como un cuaderno digital inteligente, diseñado para acompañar todo el ciclo de vida de un proyecto de software.
+# � MindManagerProject IA - Frontend
+
+---
+
+## 🎯 ¿Qué es MindManagerProject IA?
+
+**MindManagerProject IA** es un sistema integral que unifica la gestión de documentación, generación de entregables y apoyo a las decisiones mediante el uso de Inteligencia Artificial. Funciona como un cuaderno digital inteligente, diseñado para acompañar todo el ciclo de vida de un proyecto de software.
 
 ## 🚀 Características Principales
 
@@ -53,14 +59,14 @@ src/
 
 - **Node.js** (versión 16 o superior)
 - **npm** o **yarn**
-- **Backend** de ProjectManagerMind IA ejecutándose en puerto 3000
+- **Backend** de MindManagerProject IA ejecutándose en puerto 3000
 
 ### Pasos de Instalación
 
 1. **Clonar el repositorio**
    ```bash
    git clone <repository-url>
-   cd ProjectManagerMind-IA/frontend
+   cd MindManagerProject-IA/frontend
    ```
 
 2. **Instalar dependencias**

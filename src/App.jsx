@@ -27,7 +27,7 @@ function App() {
         <div className="app-container">
         <header className="app-header">
           <div className="header-left">
-            <h1>ProjectManagerMind IA</h1>
+            <h1>MindManagerProject IA</h1>
           </div>
           <div className="header-right">
             <AISettingsButton />
